@@ -1,33 +1,92 @@
 apply plugin: 'com.android.application'
-
-apply plugin: 'kotlin-android'
-
-apply plugin: 'kotlin-android-extensions'
+apply plugin: 'realm-android'
 
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "top.wefor.nowview"
+        if (isReleaseTask(gradle.startParameter.taskNames))
+            applicationId "top.wefor.nowview"
+        else
+            applicationId "top.wefor.test.nowview"
         minSdkVersion 21
         targetSdkVersion 28
-        versionCode 1
-        versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        versionCode 23
+        versionName "4.2"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField "String", "APK_DATE", "\"${generateDate()}\""
     }
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
     }
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'com.android.support:appcompat-v7:28.0.0'
-    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'com.google.android.material:material:1.0.0'
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+
+    implementation files('libs/open_sdk_r6019_lite.jar')
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:5.1.4'
+    // jsoup HTML parser library @ http://jsoup.org/
+    implementation 'org.jsoup:jsoup:1.11.3'
+    // MaterialViewpager
+    implementation 'com.github.florent37:materialviewpager:1.2.3'
+    implementation 'com.flaviofaria:kenburnsview:1.0.7'
+    implementation 'com.jpardogo.materialtabstrip:library:1.1.0'
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+    implementation 'com.jakewharton:butterknife:10.1.0'
+    annotationProcessor "com.jakewharton:butterknife-compiler:10.1.0"
+    //Fresco:图片显示、加载、定制
+    //    implementation 'com.facebook.fresco:fresco:1.5.0'
+    implementation 'com.github.chrisbanes:PhotoView:2.3.0'
+    //    apt "com.google.dagger:dagger-compiler:$DAGGER_VERSION"
+    //    compile "com.google.dagger:dagger:$DAGGER_VERSION"
+
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.8'
+    implementation 'com.alibaba:fastjson:1.1.71.android'
+    implementation 'com.squareup.okhttp3:okhttp:3.14.2'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.14.2'
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.5.0'
+    // RxPermissions
+    implementation 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.5@aar'
+
+    implementation 'jp.wasabeef:recyclerview-animators:2.2.6'
+    implementation 'com.orhanobut:logger:2.2.0'
+    implementation 'com.wang.avi:library:2.1.3'
+}
+
+
+static String generateDate() {
+    final def date = new Date()
+    return date.toString()
+}
+
+static boolean isReleaseTask(Iterable<String> taskNames) {
+    for (String taskName : taskNames) {
+        if (taskName.contains("Release")
+                && !taskName.contains('PreRelease')) {
+            println "isReleaseTask true"
+            return true
+        }
+    }
+    println "isReleaseTask false"
+    return false
 }
