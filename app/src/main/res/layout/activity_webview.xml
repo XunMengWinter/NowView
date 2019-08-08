@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+        <ProgressBar
+            android:id="@+id/progressbar"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:visibility="visible"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_marginEnd="@dimen/d5"
+            android:layout_marginBottom="40dp"
+            android:visibility="gone"
+            app:cardCornerRadius="@dimen/d4"
+            app:cardElevation="@dimen/d2"
+            tools:visibility="visible"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/wechat_textView"
+                    style="@style/text_drawable"
+                    android:drawableLeft="@drawable/wechat"
+                    android:text="@string/we_chat"
+                    />
+
+                <TextView
+                    android:id="@+id/wechatcircle_textView"
+                    style="@style/text_drawable"
+                    android:drawableStart="@drawable/wechatcircle"
+                    android:text="@string/moments"
+                    />
+
+                <TextView
+                    android:id="@+id/qq_textView"
+                    style="@style/text_drawable"
+                    android:drawableStart="@drawable/qq"
+                    android:text="@string/qq"
+                    />
+
+                <TextView
+                    android:id="@+id/qzone_textView"
+                    style="@style/text_drawable"
+                    android:drawableStart="@drawable/qzone"
+                    android:text="@string/qzone"
+                    />
+
+                <TextView
+                    android:id="@+id/other_textView"
+                    style="@style/text_drawable"
+                    android:drawableStart="@drawable/smile"
+                    android:text="@string/other"
+                    />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <include layout="@layout/widget_floating_action_button"/>
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/loading_view"
+            android:layout_width="@dimen/d6"
+            android:layout_height="@dimen/d6"
+            android:layout_gravity="center"
+            android:visibility="visible"
+            app:indicatorColor="@color/green"
+            app:indicatorName="BallTrianglePath"
+            />
+
+    </FrameLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

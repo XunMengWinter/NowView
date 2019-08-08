@@ -1,0 +1,145 @@
+<resources>
+    <string name="app_name">NowView</string>
+    <string name="app_version" translatable="false">V %1$s</string>
+
+    <string name="action_search" translatable="false">Search</string>
+    <string name="tag" translatable="false">Winter is coming </string>
+    <string name="text" translatable="false">我们生命中出现过的一些人我们的确不知道是什么时候认识的，好像一生下来或者是从开始记事儿的时候就认识他们。我很庆幸，那些我不知道是什么时候认识的人并没有弄丢太多，每每想起都会觉得很温暖。</string>
+
+    <string name="activity_gank_daily">Gank Daily</string>
+    <string name="activity_search" translatable="false">Search History</string>
+
+    <string name="other_js_switch">JavaScript switch</string>
+    <string name="js_open_description">(Open it, you can discuss in web page)</string>
+    <string name="js_close_description">(Close it, no ad in web page)</string>
+    <string name="about">About</string>
+    <string name="thanks">Thanks</string>
+    <string name="suggest">Suggest</string>
+    <string name="we_chat">WeChat</string>
+    <string name="moments">Moments</string>
+    <string name="qzone">Qzone</string>
+    <string name="other">Other</string>
+    <string name="wiki_title" translatable="false">Wikipedia:Today\'s featured article</string>
+    <string name="wiki_url" translatable="false">https://en.m.wikipedia.org/wiki/Main_Page</string>
+    <string name="share_to">Share to</string>
+    <string name="email_subject">From Now app</string>
+    <string name="send_email">Send email to Winter</string>
+    <string name="send_email_failed">There are no email clients installed.\n
+        My email is: \n
+        XunMengWinter@gmail.com</string>
+    <string name="about_detail">
+        About Now\n\n
+        No wait, no ad, no mess.\n
+        想要看得更多,\n
+        想要得到更快,\n
+        想要发现更美.\n
+        So, view more, just Now!\n\n
+        Source\n
+        https://github.com/XunMengWinter/Now\n\n\n
+        About Winter\n\n
+        A coder who loves art.\n\n
+        <!--站酷\n-->
+        <!--http://icewinter.zcool.com.cn-->
+    </string>
+    <string name="about_version" translatable="false">
+        %1$s%2$s
+    </string>
+    <string name="thanks_detail" translatable="false">
+        网页抓取\n
+        http://jsoup.org/ \n\n
+        视图框架\n
+        https://github.com/florent37/MaterialViewPager \n\n
+        Fresco\n
+        http://www.fresco-cn.org/docs/index.html#_ \n\n
+        Realm\n
+        https://realm.io/docs/java/latest/ \n\n
+        RxAndroid\n
+        https://github.com/ReactiveX/RxAndroid \n\n
+        Butter Knife\n
+        http://jakewharton.github.io/butterknife/ \n\n
+        Retrofit\n
+        https://github.com/square/retrofit \n\n
+        PhotoView\n
+        https://github.com/chrisbanes/PhotoView \n\n
+        左侧边右滑返回\n
+        https://github.com/SkillCollege/SimplifyReader \n\n
+        知乎列表\n
+        https://github.com/tangqi92/BuildingBlocks \n\n
+        ViewPager共享元素动画\n
+        https://github.com/mingdroid/SETransitionDemo \n\n
+
+        ......
+    </string>
+
+    <string name="fist_time_notice">
+        Hello, welcome to Now ~ \n\n
+        Now union beautiful images and nice text, we need load header images to make perfect experience, so,press Enter to continue.\n
+        (Just load images once)
+    </string>
+    <string name="enter">Enter</string>
+    <string name="ok">OK</string>
+    <string name="exit">Exit</string>
+
+
+    <string name="zcool" translatable="false">Zcool</string>
+    <string name="ng" translatable="false">NG</string>
+    <string name="zhihu" translatable="false">知乎</string>
+    <string name="moment" translatable="false">Moment</string>
+    <string name="mono" translatable="false">Mono</string>
+
+    <string-array name="fragments">
+        <item>@string/zcool</item>
+        <item>@string/ng</item>
+        <item>@string/zhihu</item>
+        <item>@string/moment</item>
+    </string-array>
+
+    <string name="column_select">Column select</string>
+    <string name="head_picture">Head picture source</string>
+
+    <string name="source_ng" translatable="false">National Geographic</string>
+    <string name="source_bd" translatable="false">Gank Meizhi</string>
+    <string name="source_mac" translatable="false">Mac wallpaper</string>
+    <string name="source_color" translatable="false">Pure color</string>
+
+    <string-array name="head_picture_source">
+        <item>@string/source_ng</item>
+        <item>@string/source_bd</item>
+        <item>@string/source_mac</item>
+        <item>@string/source_color</item>
+    </string-array>
+
+
+    <string name="share_subject">From Now, view more.</string>
+    <string name="share_summary_zcool">From Zcool</string>
+    <string name="share_summary_mono">From MONO</string>
+    <string name="share_summary_ng">From National Geographic</string>
+    <string name="share_summary_zhihu">From Zhihu</string>
+    <string name="share_summary_moment">From Douban Moment</string>
+
+    <string-array name="ganks">
+        <item>Android</item>
+        <item>iOS</item>
+        <item>App</item>
+        <item>瞎推荐</item>
+        <item>休息视频</item>
+        <item>拓展资源</item>
+        <item>福利</item>
+    </string-array>
+    <string name="gank_meizhi_list" translatable="false">福利</string>
+
+    <string name="empty" translatable="false">Empty content ~ T_T </string>
+    <string name="wiki_daily">Wikipedia Today</string>
+    <string name="suggest_subtitle">As you wish</string>
+    <string name="save_image">Save image</string>
+    <string name="save_image_failed_permission">Image not saved, please allow NowView \"Write and Read\" in \"Settings-Apps-NowView-Permissions\" .</string>
+    <string name="save_image_success">Image has saved to \"%s\" folder</string>
+    <string name="save_image_failed">Image not saved</string>
+
+    <string name="dialog_save_to_note">Are you want to pin this item (%s) to "My Table"?</string>
+    <string name="pin_success">Pin success in "My Table"</string>
+    <string name="pin_urls">Image Url: \n %1$s \nItem Url: \n %2$s </string>
+    <string name="yes">Yes</string>
+    <string name="no">No, thanks</string>
+    <string name="qq">QQ</string>
+</resources>
